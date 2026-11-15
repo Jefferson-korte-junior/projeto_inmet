@@ -1,0 +1,11 @@
+# dados grandes não vão para o repositório, o src/coleta.py recria tudo
+data/bronze/*
+data/silver/*
+data/gold/*
+data/_tmp/
+!data/bronze/.gitkeep
+!data/silver/.gitkeep
+!data/gold/.gitkeep
+
+__pycache__/
+.ipynb_checkpoints/

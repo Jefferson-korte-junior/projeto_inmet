@@ -1,0 +1,13 @@
+problema,decisao,justificativa,linhas_afetadas
+"Nomes de colunas longos, com acento, espaço e unidade",Renomear para snake_case sem acento,Deixa o código mais simples e evita erro de digitação,0
+Data e hora em colunas separadas e em UTC,Juntar em data_hora e passar para o horário de Brasília (UTC-3),"Dia, mês e hora fazem mais sentido no horário local",20029680
+Datas ou horas que não viram data,Remover a linha,Sem data não dá para usar a medição,0
+Horas que mudaram de ano na troca de fuso,Remover,"São as 3 primeiras horas de 1º de janeiro, que no horário local são do ano anterior",6852
+Linhas sem nenhuma medição,Remover,A estação estava parada. Essas linhas só aumentam a base sem trazer informação,5330306
+Registros duplicados (mesma estação e hora),Remover e manter o primeiro,Contaria a mesma hora duas vezes nas médias,0
+Valores fora do domínio físico,Trocar o valor por nulo e manter a linha,"É erro de sensor, mas as outras medidas da mesma hora estão boas",3260
+Ausentes nas medições,"Manter como nulo, sem imputar",Inventar valor de clima hora a hora criaria dado falso. As médias usam só horas válidas,129709
+Outliers por IQR e z-score,Manter quando estão dentro do domínio,"Ondas de calor, frio e chuva forte são fenômenos reais",0
+Tipos pesados (float64 e texto),float32 nas medidas e category nos textos,A base cabe na memória do Colab,14692522
+Estação sem município no IBGE,Manter a linha com município nulo,O nome da estação não bate com o nome de um município,951951
+Mês sem fase do El Niño,Manter com fase nula,O ONI cobre todos os meses do recorte,0

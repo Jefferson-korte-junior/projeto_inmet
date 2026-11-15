@@ -1,0 +1,28 @@
+coluna_original,coluna_nova,tipo,unidade,descricao,dominio
+Data,data,texto (category),AAAA/MM/DD,Data da medição em UTC,datas do ano do arquivo
+Hora UTC,hora_utc,texto (category),HHMM UTC,Hora da medição em UTC,0000 UTC a 2300 UTC
+"PRECIPITAÇÃO TOTAL, HORÁRIO (mm)",precipitacao_mm,float32,mm,Chuva acumulada na hora,0 a 150
+"PRESSAO ATMOSFERICA AO NIVEL DA ESTACAO, HORARIA (mB)",pressao_mb,float32,mB (hPa),Pressão do ar na altura da estação,700 a 1050
+PRESSÃO ATMOSFERICA MAX.NA HORA ANT. (AUT) (mB),pressao_max_mb,float32,mB (hPa),Maior pressão na hora anterior,700 a 1050
+PRESSÃO ATMOSFERICA MIN. NA HORA ANT. (AUT) (mB),pressao_min_mb,float32,mB (hPa),Menor pressão na hora anterior,700 a 1050
+RADIACAO GLOBAL (Kj/m²),radiacao_kj_m2,float32,kJ/m²,Energia do sol acumulada na hora (fica vazia à noite),0 a 5000
+"TEMPERATURA DO AR - BULBO SECO, HORARIA (°C)",temperatura_c,float32,°C,Temperatura do ar,-10 a 50
+TEMPERATURA DO PONTO DE ORVALHO (°C),orvalho_c,float32,°C,Temperatura em que o ar fica saturado,-30 a 40
+TEMPERATURA MÁXIMA NA HORA ANT. (AUT) (°C),temperatura_max_c,float32,°C,Maior temperatura na hora anterior,-10 a 50
+TEMPERATURA MÍNIMA NA HORA ANT. (AUT) (°C),temperatura_min_c,float32,°C,Menor temperatura na hora anterior,-10 a 50
+TEMPERATURA ORVALHO MAX. NA HORA ANT. (AUT) (°C),orvalho_max_c,float32,°C,Maior ponto de orvalho na hora anterior,-30 a 40
+TEMPERATURA ORVALHO MIN. NA HORA ANT. (AUT) (°C),orvalho_min_c,float32,°C,Menor ponto de orvalho na hora anterior,-30 a 40
+UMIDADE REL. MAX. NA HORA ANT. (AUT) (%),umidade_max_pct,float32,%,Maior umidade relativa na hora anterior,0 a 100
+UMIDADE REL. MIN. NA HORA ANT. (AUT) (%),umidade_min_pct,float32,%,Menor umidade relativa na hora anterior,0 a 100
+"UMIDADE RELATIVA DO AR, HORARIA (%)",umidade_pct,float32,%,Umidade relativa do ar,0 a 100
+"VENTO, DIREÇÃO HORARIA (gr) (° (gr))",vento_direcao_graus,float32,graus,De onde vem o vento (0 é norte),0 a 360
+"VENTO, RAJADA MAXIMA (m/s)",vento_rajada_ms,float32,m/s,Rajada mais forte na hora,0 a 60
+"VENTO, VELOCIDADE HORARIA (m/s)",vento_velocidade_ms,float32,m/s,Velocidade média do vento,0 a 50
+REGIAO (cabeçalho),regiao,category,sigla,Região da estação,"N, NE, CO, SE, S"
+UF (cabeçalho),uf,category,sigla,Estado da estação,27 UFs
+ESTACAO (cabeçalho),estacao,category,texto,Nome da estação,texto
+CODIGO (WMO) (cabeçalho),codigo_wmo,category,texto,Código da estação no INMET,letra e 3 números (ex.: A001)
+LATITUDE (cabeçalho),latitude,float64,graus,Latitude da estação,-34 a 6
+LONGITUDE (cabeçalho),longitude,float64,graus,Longitude da estação,-74 a -28
+ALTITUDE (cabeçalho),altitude,float64,m,Altitude da estação,0 a 3000
+(nome da pasta),ano,int,ano,Ano do arquivo,2021 a 2024
